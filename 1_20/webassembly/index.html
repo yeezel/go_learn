@@ -1,0 +1,16 @@
+<html>
+<script src="wasm_exec.js"></script>
+<script>
+	const go = new Go();
+	WebAssembly.instantiateStreaming(fetch("weba.wasm"), go.importObject)
+		.then((result) => go.run(result.instance));
+</script>
+<body>
+	<input id="num" type="number" />
+	<button id="btn" onclick="ans.innerHTML=fibFunc(num.value * 1)">Click</button>
+    <button id="dombtn">DomClick</button>
+    <button id="callbackbtn" onclick="callbackFunc(num.value * 1, (v)=> ans.innerHTML=v)">CallbackClick</button>
+	<p id="ans">1</p>
+    <br/>
+</body>
+</html>

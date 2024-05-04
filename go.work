@@ -2,5 +2,8 @@ go 1.20
 
 use (
 	./1_20
+	./libthird/protoc
+	./libthird/gin
+	./libthird/mmap
 	./libthird/websocket
 )

@@ -1,0 +1,38 @@
+// protobuf 有2个版本，默认版本是 proto2，如果需要 proto3，则需要在非空非注释第一行使用 syntax = "proto3" 标明版本
+syntax = "proto3";
+// 指定go代码存放位置
+option go_package = "./"; 
+// 即包名声明符是可选的，用来防止不同的消息类型有命名冲突。
+package main;
+
+// 消息类型 使用 message 关键字定义，Student 是类型名，name, male, scores 是该类型的 3 个字段，
+// 类型分别为 string, bool 和 []int32。字段可以是标量类型，也可以是合成类型
+// this is a comment
+message Student {
+  // 每个字符 =后面的数字称为标识符，每个字段都需要提供一个唯一的标识符。
+  // 标识符用来在消息的二进制格式中识别各个字段，一旦使用就不能够再改变，标识符的取值范围为 [1, 2^29 - 1] 
+  string name = 1;
+  bool male = 2;
+  // 每个字段的修饰符默认是 singular，一般省略不写，repeated 表示字段可重复，即用来表示 Go 语言中的数组类型。
+  repeated int32 scores = 3;
+}
+
+/*
+一个 .proto 文件中可以写多个消息类型，即对应多个结构体(struct)
+message xxx {
+    ...
+}
+message xxx {
+    ...
+}
+
+
+更新消息类型时，可能会将某些字段/标识符删除。
+这些被删掉的字段/标识符可能被重新使用，如果加载老版本的数据时，可能会造成数据冲突，在升级时，可以将这些字段/标识符保留(reserved)，这样就不会被重新使用了，protoc 会检查。
+message Foo {
+  reserved 2, 15, 9 to 11;
+  reserved "foo", "bar";
+}
+
+
+*/
