@@ -4,9 +4,10 @@ import (
 	"fmt"
 	"strconv"
 	"strings"
+	"testing"
 )
 
-func TestStringDemo() {
+func TestStringDemo(t *testing.T) {
 	var name string = "lili"
 
 	//使用+进行字符串拼接，这不是最高效的做法，更好的办法是使用函数 strings.Join()，最好的办法使用字节缓冲（bytes.Buffer）拼接

@@ -1,8 +1,11 @@
 package basics
 
-import "fmt"
+import (
+	"fmt"
+	"testing"
+)
 
-func TestPointerDemo() {
+func TestPointerDemo(t *testing.T) {
 	var a int = 20 /* 声明实际变量 */
 	var b int = 200
 	var ip *int /* 声明指针变量 */

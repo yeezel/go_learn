@@ -1,8 +1,11 @@
 package basics
 
-import "fmt"
+import (
+	"fmt"
+	"testing"
+)
 
-func TestIfDemo() {
+func TestIfDemo(t *testing.T) {
 	var age int = 23
 	if age == 25 {
 		fmt.Println("true")

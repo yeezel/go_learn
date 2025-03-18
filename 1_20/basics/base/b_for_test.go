@@ -1,8 +1,11 @@
 package basics
 
-import "fmt"
+import (
+	"fmt"
+	"testing"
+)
 
-func TestForDemo() {
+func TestForDemo(t *testing.T) {
 	//方式一
 	sum := 0
 	for i := 0; i <= 10; i++ {

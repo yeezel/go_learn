@@ -1,6 +1,9 @@
 package basics
 
-import "fmt"
+import (
+	"fmt"
+	"testing"
+)
 
 /*
 func：函数由 func 开始声明
@@ -20,7 +23,7 @@ func function_name( [parameter list] ) [return_types 或者 (return_types1,retur
 var num int = 10
 var numx2, numx3 int
 
-func TestFuncDemo() {
+func TestFuncDemo(t *testing.T) {
 	numx2, numx3 = getX2AndX3(num)
 	PrintValues()
 	numx2, numx3 = getX2AndX3_2(num)

@@ -35,8 +35,9 @@ func JsonDemo() {
 	vc := VCard{"Jan", "Kersschot", []*Address{pa, wa}, "none"}
 	// fmt.Printf("%v: \n", vc) // {Jan Kersschot [0x126d2b80 0x126d2be0] none}:
 	// JSON format:
-	// 在 web 应用中最好使用 json.MarshalforHTML() 函数，会对html标签转移
 	js, _ := json.Marshal(vc)
+	// 使用 template.HTMLEscapeString() 转义 HTML 标签
+	// template.HTMLEscapeString(string(js))
 	fmt.Printf("JSON format: %s", js)
 	// using an encoder:
 	file, _ := os.OpenFile("vcard.json", os.O_CREATE|os.O_WRONLY, 0666)

@@ -3,9 +3,10 @@ package basics
 import (
 	"fmt"
 	"reflect"
+	"testing"
 )
 
-func TestArrayDemo() {
+func TestArrayDemo(t *testing.T) {
 
 	//区别
 	var arr1 = new([5]int)            // 使用 new 函数创建一个指向数组的指针

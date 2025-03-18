@@ -6,7 +6,7 @@ import (
 )
 
 func TestConstDemo(t *testing.T) {
-	//和变量定义一样，只是关键字`var`变成了`const`
+	//常量和变量定义一样，只是关键字`var`变成了`const`
 	// - iota，特殊常量，可以被编译器修改的常量
 	// 	- const 中每新增一行常量声明将使 iota 计数一次
 	// 	- iota 在 const关键字出现时将被重置为 0

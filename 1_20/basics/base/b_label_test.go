@@ -1,8 +1,11 @@
 package basics
 
-import "fmt"
+import (
+	"fmt"
+	"testing"
+)
 
-func TestLabelDemo() {
+func TestLabelDemo(t *testing.T) {
 	//LABEL，建议使用全部大写字母
 	println("continue label==================")
 LABEL1:

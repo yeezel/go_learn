@@ -3,11 +3,12 @@ package basics
 import (
 	"bytes"
 	"fmt"
+	"testing"
 )
 
 //切片是一个 长度可变的数组
 
-func TestSliceDemo() {
+func TestSliceDemo(t *testing.T) {
 
 	//声明切片的格式是： var identifier []type（不需要说明长度）
 	// var x = []int{2, 3, 5, 7, 11} //直接初始化

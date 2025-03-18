@@ -3,9 +3,10 @@ package basics
 import (
 	"fmt"
 	"sort"
+	"testing"
 )
 
-func TestMapDemo() {
+func TestMapDemo(t *testing.T) {
 
 	/* 声明变量，默认 map 是 nil */
 	// var map_variable map[key_data_type]value_data_type

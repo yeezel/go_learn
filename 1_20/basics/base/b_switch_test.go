@@ -1,8 +1,11 @@
 package basics
 
-import "fmt"
+import (
+	"fmt"
+	"testing"
+)
 
-func TestSwitchDemo() {
+func TestSwitchDemo(t *testing.T) {
 	/* 定义局部变量 */
 	var grade string
 	var marks int = 90

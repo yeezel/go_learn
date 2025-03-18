@@ -3,6 +3,7 @@ package basics
 import (
 	"fmt"
 	"os"
+	"testing"
 	"text/template"
 )
 
@@ -11,7 +12,7 @@ type Person1 struct {
 	nonExportedAgeField string
 }
 
-func TestTemplateDemo() {
+func TestTemplateDemo(tt *testing.T) {
 	tmp := template.New("hello")
 	t, e := tmp.Parse("hello {{.Name}}!\n")
 	// 校验模板格式，不正确会panic
